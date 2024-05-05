@@ -1,0 +1,87 @@
+.coca-rtpb-plugin__field_color-picker {
+
+	button.trigger-button {
+		padding: 3px;
+		background: #fff;
+		border: none;
+		border-radius: 4px;
+		box-shadow: 0 0 0 1px rgb(0 0 0 / 10%);
+		display: inline-block;
+		cursor: pointer;
+		overflow: hidden;
+
+		&:focus-visible {
+			outline: none;
+		}
+	}
+
+	.color-picker {
+		padding-top: 16px;
+		padding-bottom: 6px;
+		border-radius: 10px;
+		background-color: #dce6f0;
+		box-shadow: 0 6px 12px #999;
+
+		.react-colorful {
+			border-radius: 12px;
+			padding: 0 16px;
+
+			.react-colorful__saturation {
+				margin: 15px 0;
+				border-radius: 5px;
+				border-bottom: none;
+			}
+
+			.react-colorful__hue {
+				order: -1;
+			}
+
+			.react-colorful__hue,
+			.react-colorful__alpha {
+				height: 14px;
+				border-radius: 5px;
+			}
+
+			.react-colorful__hue-pointer,
+			.react-colorful__alpha-pointer {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
+	// color input
+	.color-input {
+		width: 200px;
+		padding: 16px 16px 0;
+
+		input[type="text"] {
+			padding: 4px 8px !important;
+		}
+	}
+
+
+	// presets
+	.picker__swatches {
+		display: flex;
+		flex-wrap: wrap;
+		width: 200px;
+		margin-top: 16px;
+		padding: 16px 16px 0;
+		border-top: 1px solid #ddd;
+	}
+
+	.picker__swatch {
+		width: 16px;
+		height: 16px;
+		margin: 0 10px 10px 0;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		position: relative;
+		border-radius: 3px;
+		box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
+		outline: none;
+	}
+}
+

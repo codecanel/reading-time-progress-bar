@@ -1,0 +1,49 @@
+// panel Class Prefix
+$plugin-prefix: "reading-time-progress-bar" !default;
+
+
+// we may need to update this selector according to the locale string in the future,
+// if the plugin added full support for Localization with WPML or WordPress Locale services.
+[dir="rtl"] .toplevel_page_reading-time-progress-bar,
+.rtl.toplevel_page_reading-time-progress-bar {
+
+	#wpcontent {
+		padding-right: 0;
+	}
+
+	##{$plugin-prefix}__edit_panel_root {
+		// button
+		.button-group-container .button:not(:last-child) {
+			margin-right: 0 !important;
+		}
+
+		.button-group-container .button:not(:first-child) {
+			margin-right: 10px !important;
+		}
+
+		// select component
+		.panel-wrapper .panel-body .basic-multi-select .select__multi-value,
+		.panel-wrapper .panel-body .basic-multi-select .select__single-value,
+		.panel-wrapper .panel-body .basic-select .select__multi-value,
+		.panel-wrapper .panel-body .basic-select .select__single-value {
+			padding-right: 10px !important;
+			padding-left: 0 !important;
+		}
+
+		// preview
+		.progress-bar-preview {
+
+			.progress-bar-container.rounded .progress-bar {
+				border-radius: 50px 0 0 50px;
+			}
+
+			.progress-bar-container.ios .progress-bar {
+				background: linear-gradient(to left, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+			}
+
+			.progress-bar-container.animated .progress-bar::after {
+				animation: coca-reading-progress-animated-reverse 2s linear infinite;
+			}
+		}
+	}
+}

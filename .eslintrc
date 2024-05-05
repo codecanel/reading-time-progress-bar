@@ -1,0 +1,41 @@
+{
+	"extends": [
+		"plugin:@wordpress/eslint-plugin/recommended",
+		"plugin:@wordpress/eslint-plugin/esnext",
+		"plugin:@wordpress/eslint-plugin/jsdoc",
+		"plugin:@wordpress/eslint-plugin/react",
+    "plugin:react-hooks/recommended"
+	],
+	"globals": {
+		"document": "readonly",
+		"location": "readonly",
+		"window": "readonly",
+		"navigator": "readonly",
+		"wp": "readonly",
+		"_": "readonly",
+		"NodeList": "readonly",
+		"Element": "readonly"
+	},
+	"rules": {
+		"comma-dangle": "off",
+		"jsdoc/newline-after-description": "off",
+		"space-before-function-paren": "off",
+		"prettier/prettier": "off"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+            "alias": {
+                "map": [
+                    ["@codecanel/admin", "./src/admin/scripts"],
+                    ["@codecanel/widget", "./src/widgets"]
+                ],
+                "extensions": [
+                    ".ts", ".js", ".jsx", ".json"
+                ]
+            }
+		}
+	}
+}

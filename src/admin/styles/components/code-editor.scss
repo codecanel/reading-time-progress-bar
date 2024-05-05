@@ -1,0 +1,20 @@
+.code-editor {
+
+	.vs-dark {
+		padding-top: 10px;
+	}
+
+	.cm-theme {
+
+		.cm-editor {
+			// max-width: calc(100% - 332px);
+			outline: none;
+		}
+
+		.cm-content {
+			word-break: normal;
+			word-wrap: break-word;
+			white-space: pre-wrap;
+		}
+	}
+}

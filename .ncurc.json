@@ -1,0 +1,13 @@
+{
+    "upgrade": true,
+    "concurrency": 20,
+    "packageManager": "yarn",
+    "reject": [
+        "react",
+        "react-dom",
+        "stylelint",
+        "@codemirror/state",
+        "@codemirror/view",
+        "@uiw/react-codemirror"
+    ]
+}

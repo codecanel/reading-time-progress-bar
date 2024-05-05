@@ -1,0 +1,39 @@
+.recommendations {
+	max-width: 300px;
+
+	.widget-title {
+		margin-bottom: 1.5em !important;
+	}
+
+	.product {
+		padding: 1.6em 2.2em;
+
+		.product-image,
+		.product-content {
+			margin-bottom: 2em;
+		}
+
+
+		.product-image {
+			display: flex;
+			justify-content: center;
+
+			img {
+				max-width: 140px;
+				height: auto;
+			}
+
+		}
+
+		.product-content {
+
+			h3 {
+				margin-bottom: 1em !important;
+			}
+
+		}
+
+		.product-permalink {}
+	}
+
+}

@@ -1,0 +1,112 @@
+{
+    "name": "@codecanel/reading-time-progress-bar",
+    "description": "Track and display the average reading time of your posts. It provides valuable insights into how long it takes for users to read your content, helping you optimize your content length and engagement.",
+    "version": "1.0.0",
+    "author": {
+        "name": "Code Canel",
+        "url": "https://codecanel.com"
+    },
+    "packaging": {
+        "type": "plugin",
+        "slugs": {
+            "archive": {
+                "freemium": "@archives/reading-time-progress-bar"
+            },
+            "plugin": {
+                "freemium": "reading-time-progress-bar"
+            }
+        },
+        "common": [
+            "uninstall.php",
+            "CHANGELOG",
+            "LICENSE",
+            "readme.txt",
+            "build/**",
+            "languages/**",
+            "templates/**"
+        ],
+        "wporg": [
+            ".wordpress-org/**",
+            "Plugin.php",
+            "plugin-freemium.php",
+            "includes/admin/**",
+            "includes/frontend/**",
+            "includes/utils/**"
+        ],
+        "freemium": [
+            "Plugin.php",
+            "plugin-freemium.php",
+            "includes/admin/**",
+            "includes/frontend/**",
+            "includes/utils/**"
+        ],
+        "premium": []
+    },
+    "scripts": {
+        "start": "wp-scripts start",
+        "build": "wp-scripts build",
+        "plugin:bundle": "yarn build && yarn grunt:default && yarn plugin:zip",
+        "plugin:bundle:wporg": "yarn build && yarn grunt:default && yarn plugin:zip:wporg",
+        "plugin:start": "ncu -u && yarn install && composer update --with-all-dependencies",
+        "plugin:clean": "rm -rf build languages package-lock.json && yarn plugin:start",
+        "plugin:update:deps": "wp-scripts packages-update",
+        "plugin:zip": "node tools/build-package/plugin-zip.mjs",
+        "plugin:zip:wporg": "node tools/build-package/plugin-zip.mjs --target=wporg",
+        "grunt:default": "grunt default"
+    },
+    "devDependencies": {
+        "@codemirror/lang-css": "^6.2.1",
+        "@codemirror/lang-json": "^6.0.1",
+        "@codemirror/language": "^6.10.0",
+        "@codemirror/legacy-modes": "^6.3.3",
+        "@codemirror/state": "^6.3.3",
+        "@codemirror/view": "^6.22.2",
+        "@playwright/test": "^1.41.1",
+        "@uiw/codemirror-theme-vscode": "^4.21.21",
+        "@uiw/react-codemirror": "4.8.1",
+        "@wordpress/browserslist-config": "^5.33.0",
+        "@wordpress/element": "^5.27.0",
+        "@wordpress/eslint-plugin": "^17.7.0",
+        "@wordpress/i18n": "^4.50.0",
+        "@wordpress/scripts": "^27.1.0",
+        "@wordpress/stylelint-config": "^21.33.0",
+        "adm-zip": "^0.5.10",
+        "browserslist": "^4.22.3",
+        "codemirror": "6.0.1",
+        "colord": "^2.9.3",
+        "copy-webpack-plugin": "^12.0.2",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "fast-glob": "^3.3.2",
+        "grunt": "^1.6.1",
+        "grunt-wp-i18n": "^1.0.3",
+        "grunt-wp-readme-to-markdown": "^2.1.0",
+        "jquery": "^3.7.1",
+        "npm-packlist": "^8.0.2",
+        "react": "^18.2.0",
+        "react-colorful": "^5.6.1",
+        "react-custom-checkbox": "^3.1.5",
+        "react-dom": "^18.2.0",
+        "react-icons": "^5.0.1",
+        "react-select": "^5.8.0",
+        "react-toastify": "^10.0.4",
+        "webpack-cli": "^5.1.4",
+        "webpack-remove-empty-scripts": "^1.0.4"
+    },
+    "optionalDependencies": {
+        "@babel/core": "^7.23.9",
+        "eslint": "^8.56.0",
+        "webpack": "^5.90.0"
+    },
+    "resolutions": {
+        "@codemirror/state": "^6.3.2",
+        "@codemirror/view": "^6.22.1",
+        "@uiw/react-codemirror": "4.8.1"
+    },
+    "volta": {
+        "node": "21.6.1",
+        "yarn": "4.0.2",
+        "npm": "10.4.0"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "extends": [
+        "@wordpress/stylelint-config/scss"
+    ],
+    "rules": {
+        "max-line-length": 300,
+        "unit-allowed-list": [ "%", "deg", "px", "rem", "em", "ms", "vmax" ]
+    },
+    "ignore": []
+}

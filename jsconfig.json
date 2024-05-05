@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@codecanel/admin/*": [ "./src/admin/scripts/" ],
+			"@codecanel/widget/*": [ "./src/widgets/" ]
+		}
+	},
+	"exclude": [
+		"build",
+		"build-module",
+		"node_modules",
+		"vendor"
+	]
+}
